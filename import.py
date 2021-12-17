@@ -16,17 +16,23 @@ for attempt in range(20):
         data = data['data']
         success = True
         break
-    except:
-        print('error')
+    except Exception as e:
+        print(e)
         sleep (5)
 
 if success != True:
     raise Exception('My error')
 
 # general
-data['app.root_url'] = 'https://' + config['ingressHost']
-data['app.logo_url'] = 'https://' + config['ingressHost'] + '/public/static/logo.png'
+data['app.root_url'] = 'https://' + config['rootUrl']
+data['app.logo_url'] = 'https://' + config['rootUrl'] + '/public/static/logo.png'
 data['app.from_email'] = config['general']['defaultFromEmail']
+data['app.notify_emails'] = config['general']['adminNotificationEmails']
+data['app.enable_public_subscription_page'] = bool(config['general']['enablePublicSubscriptionPage'])
+
+# uploads
+data['upload.provider'] = config['mediaUploads']['provider']
+data['upload.upload_path'] = config['mediaUploads']['uploadPath']
 
 # smtp
 data['smtp'][0]['host'] = config['smtp']['host']

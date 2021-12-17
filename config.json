@@ -1,13 +1,18 @@
 {
-    "username": "myusername",
-    "password": "mysecretpassword",
-    "ingressHost": "myingress.test",
-    "settingsEndpoint": "http://listmonk-app/api/settings",
+    "username": "admin",
+    "password": "admin",
+    "rootUrl": "myingress.test",
+    "settingsEndpoint": "https://newsletter.gymtrack.nl/api/settings",
     "general": {
         "defaultFromEmail": "email@test.test",
         "adminNotificationEmails": [
             "email@test.test"
-        ]
+        ],
+        "enablePublicSubscriptionPage": "true"
+    },
+    "mediaUploads": {
+        "provider": "filesystem",
+        "uploadPath": "/listmonk/uploads"
     },
     "smtp": {
         "host": "host",
