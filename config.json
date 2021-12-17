@@ -1,0 +1,21 @@
+{
+    "username": "myusername",
+    "password": "mysecretpassword",
+    "ingressHost": "myingress.test",
+    "settingsEndpoint": "http://listmonk-app/api/settings",
+    "general": {
+        "defaultFromEmail": "email@test.test",
+        "adminNotificationEmails": [
+            "email@test.test"
+        ]
+    },
+    "smtp": {
+        "host": "host",
+        "port": "465",
+        "username": "mysmtpusername",
+        "password": "mysmtppassword",
+        "authProtocol": "myauthprotocol",
+        "tlsEnabled": "true",
+        "skipTlsVerification": "true"   
+    }
+}
