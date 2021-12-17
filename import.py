@@ -32,7 +32,7 @@ data['app.enable_public_subscription_page'] = bool(config['general']['enablePubl
 
 # uploads
 data['upload.provider'] = config['mediaUploads']['provider']
-data['upload.upload_path'] = config['mediaUploads']['uploadPath']
+data['upload.filesystem.upload_path'] = config['mediaUploads']['uploadPath']
 
 # smtp
 data['smtp'][0]['host'] = config['smtp']['host']
